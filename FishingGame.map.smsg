@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at spi_param.h(8): object "READ_MODE" differs only in case from object "read_mode" in the same scope File: F:/QuartusStuff/Projects/FishingGame/v/spi_param.h Line: 8
+Warning (10268): Verilog HDL information at VGA.sv(136): always construct contains both blocking and non-blocking assignments File: F:/QuartusStuff/Projects/FishingGame/VGA.sv Line: 136

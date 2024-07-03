@@ -1,0 +1,24 @@
+module debouncer(
+	input logic clk,
+	input logic KEY,
+	output logic KEY_DEBOUNCED
+	);
+	
+	logic KEY_BOUNCER;
+	
+	always @(posedge clk) begin
+	
+		KEY_DEBOUNCED <= 0;
+		
+		if(KEY & ~KEY_BOUNCER) begin
+			KEY_DEBOUNCED <= 1;
+			KEY_BOUNCER <= 1;
+		end else if(~KEY) begin
+			KEY_BOUNCER <= 0;
+		end
+		
+
+	end
+	
+	
+endmodule

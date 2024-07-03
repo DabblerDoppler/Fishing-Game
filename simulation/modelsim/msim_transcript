@@ -1,0 +1,257 @@
+# Reading F:/QuartusStuff/IntelFPGA/modelsim_ase/tcl/vsim/pref.tcl
+# do FishingGame_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying F:/QuartusStuff/IntelFPGA/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/led_driver.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/led_driver.v 
+# -- Compiling module led_driver
+# 
+# Top level modules:
+# 	led_driver
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/SEG7_LUT_6.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/SEG7_LUT_6.v 
+# -- Compiling module SEG7_LUT_6
+# 
+# Top level modules:
+# 	SEG7_LUT_6
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/SEG7_LUT.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/SEG7_LUT.v 
+# -- Compiling module SEG7_LUT
+# 
+# Top level modules:
+# 	SEG7_LUT
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/Reset_Delay.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/Reset_Delay.v 
+# -- Compiling module Reset_Delay
+# 
+# Top level modules:
+# 	Reset_Delay
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame {F:/QuartusStuff/Projects/FishingGame/DE10_LITE_Default.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame" F:/QuartusStuff/Projects/FishingGame/DE10_LITE_Default.v 
+# -- Compiling module DE10_LITE_Default
+# 
+# Top level modules:
+# 	DE10_LITE_Default
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame {F:/QuartusStuff/Projects/FishingGame/VGA_Audio_PLL.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame" F:/QuartusStuff/Projects/FishingGame/VGA_Audio_PLL.v 
+# -- Compiling module VGA_Audio_PLL
+# 
+# Top level modules:
+# 	VGA_Audio_PLL
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/db {F:/QuartusStuff/Projects/FishingGame/db/vga_audio_pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/db" F:/QuartusStuff/Projects/FishingGame/db/vga_audio_pll_altpll.v 
+# -- Compiling module VGA_Audio_PLL_altpll
+# 
+# Top level modules:
+# 	VGA_Audio_PLL_altpll
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/spi_ee_config.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/spi_ee_config.v 
+# -- Compiling module spi_ee_config
+# 
+# Top level modules:
+# 	spi_ee_config
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/spi_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/spi_controller.v 
+# -- Compiling module spi_controller
+# 
+# Top level modules:
+# 	spi_controller
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/QuartusStuff/Projects/FishingGame/v {F:/QuartusStuff/Projects/FishingGame/v/pseudo_rng.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/QuartusStuff/Projects/FishingGame/v" F:/QuartusStuff/Projects/FishingGame/v/pseudo_rng.sv 
+# -- Compiling module pseudo_rng
+# 
+# Top level modules:
+# 	pseudo_rng
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/QuartusStuff/Projects/FishingGame {F:/QuartusStuff/Projects/FishingGame/debouncer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/QuartusStuff/Projects/FishingGame" F:/QuartusStuff/Projects/FishingGame/debouncer.sv 
+# -- Compiling module debouncer
+# 
+# Top level modules:
+# 	debouncer
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/QuartusStuff/Projects/FishingGame {F:/QuartusStuff/Projects/FishingGame/VGA.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/QuartusStuff/Projects/FishingGame" F:/QuartusStuff/Projects/FishingGame/VGA.sv 
+# -- Compiling module VGA
+# 
+# Top level modules:
+# 	VGA
+# End time: 19:55:42 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/QuartusStuff/Projects/Chiptune {F:/QuartusStuff/Projects/Chiptune/audio_gen.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:42 on Jun 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/QuartusStuff/Projects/Chiptune" F:/QuartusStuff/Projects/Chiptune/audio_gen.sv 
+# -- Compiling module audio_gen
+# 
+# Top level modules:
+# 	audio_gen
+# End time: 19:55:43 on Jun 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/QuartusStuff/Projects/FishingGame {F:/QuartusStuff/Projects/FishingGame/game_logic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:43 on Jun 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/QuartusStuff/Projects/FishingGame" F:/QuartusStuff/Projects/FishingGame/game_logic.sv 
+# -- Compiling module game_logic
+# 
+# Top level modules:
+# 	game_logic
+# End time: 19:55:43 on Jun 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.game_logic
+# vsim -gui -l msim_transcript work.game_logic 
+# Start time: 19:55:58 on Jun 26,2024
+# Loading sv_std.std
+# Loading work.game_logic
+# Loading work.debouncer
+# Loading work.pseudo_rng
+add wave -position end  sim:/game_logic/clk
+add wave -position end  sim:/game_logic/key
+add wave -position end  sim:/game_logic/reset
+add wave -position end  sim:/game_logic/accel_data
+add wave -position end  sim:/game_logic/rod_pos
+add wave -position end  sim:/game_logic/disp_scene
+add wave -position end  sim:/game_logic/play_sound
+add wave -position end  sim:/game_logic/game_state
+add wave -position end  sim:/game_logic/counter
+add wave -position end  sim:/game_logic/presses
+add wave -position end  sim:/game_logic/random
+add wave -position end  sim:/game_logic/fish_size
+add wave -position end  sim:/game_logic/key_debounced
+add wave -position end  sim:/game_logic/next_state
+add wave -position end  sim:/game_logic/tilt_pos
+force -freeze sim:/game_logic/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/game_logic/reset 1 0
+run
+noforce sim:/game_logic/reset
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -continue
+run
+run
+run
+run
+run -all
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:57:07 on Jun 26,2024, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0

@@ -1,0 +1,81 @@
+module SDRAM_CONTROLLER #(
+	//this controller only reads
+	parameter CLK_RATE = 143000000;
+	parameter SPEED_GRADE = 7; 
+	parameter BURST_LENGTH;
+	parameter CAS_LATENCY;
+	//parameters from datasheet https://www.issi.com/WW/pdf/42-45R-S_86400D-16320D-32160D.pdf
+	parameter tRCD = 15; //ns
+	parameter tRP = 15;  //ns
+) (
+	input logic clk,
+	input logic [21:0] data_address,
+	input logic read_req,
+	output logic read_grant,
+	output logic [15:0] data_read,
+	output logic data_read_valid,
+	
+	// These ports should be connected directly to the SDRAM chip
+	output logic clock_enable,
+	output logic [1:0] bank_activate,
+	output logic [11:0] address,
+	output logic chip_select,
+	output logic row_address_strobe,
+	output logic column_address_strobe,
+	output logic write_enable,
+	output logic [1:0] dqm,
+	inout wire [15:0] dq
+);
+
+	assign write_enable = 0;
+
+	enum {IDLE, ACTIVATE, NOP1, READ, PRECHARGE, NOP2, REFRESH, NOP3} state; 
+	enum {IDLE, ACTIVATE, NOP1, READ, PRECHARGE, NOP2, REFRESH, NOP3} next_state;
+	
+	
+	logic read_cycle = read_now;
+	logic [21:0] addr_reg = 0;  
+	always @(posedge clk) addr_reg <= address;
+	
+	logic same_row_and_bank;
+	assign same_row_and_bank = (address[19:8]== addr_reg[19:8]);
+	assign RdGnt = (state==2'h0 &  read_now) | (state==2'h1 &  ReadSelected & RdReq & SameRowAndBank);
+
+	always @(posedge clk) begin
+		case state
+			
+			IDLE: begin
+				if(read_req) begin
+					bank_activate <= data_address[21:20]; 
+					address <= data_address[19:8]; //row
+					dqm <= 2'b11;
+					next_state <= ACTIVATE;
+				end else begin
+					bank_activate <= 0;
+					address <= 0;
+					dqm <= 2'b11;
+					next_state <= IDLE;
+				end
+			end
+			
+		READ: begin
+			bank_activate <= data_address[21:20];
+			address[9:0] <= {2'b00, data_address[7:0]} //column
+			address[10] <= 1'b0;
+			dqm <= 2'b00;
+			next_state <= more_reqs_in_same_bank ? READ : DONE;
+		end
+		DONE: begin
+			bank_activate <= 0;
+			address <= 11'b10000000000;
+			dqm <= 2'b11;
+			next_state <= IDLE;
+		end
+			
+			
+		
+		end
+					
+		endcase
+		
+endmodule

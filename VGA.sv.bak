@@ -1,0 +1,36 @@
+//module drives the built-in VGA port to show a picture on a 768*512 VGA Monitor.
+//clk input should be 25 MHz
+module VGA (
+	input logic clk,
+	output logic VS,
+	output logic HS,
+	output logic R,
+	output logic G,
+	output logic B
+);
+
+//the pixel we're currently looking at in using coordinate logic.
+logic [9:0] X;
+logic [8:0] Y;
+//vertical and horizontal sync, we use the uninverted version in logic and the inverted version to drive pins.
+logic HS_uninv;
+logic VS_uninv;
+
+wire XFull;
+
+assign XFull = (X == 767);
+
+//loop through the pixels on the monitor
+always @(posedge clk) begin
+	if(XFull) X <= 0; Y <= Y + 1;
+	else X <= X + 1;
+end
+
+//
+always @(posedge clk) begin
+	HS_uninv <= (X[9:4] == 0);
+	VS_uninv <= (Y == 0);
+end
+
+
+endmodule

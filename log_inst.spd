@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="log_inst_sim/log_inst_memoryC0_uid231_lnTables_lutmem.hex"
+   type="HEX" />
+ <file
+   path="log_inst_sim/log_inst_memoryC0_uid232_lnTables_lutmem.hex"
+   type="HEX" />
+ <file
+   path="log_inst_sim/log_inst_memoryC1_uid235_lnTables_lutmem.hex"
+   type="HEX" />
+ <file
+   path="log_inst_sim/log_inst_memoryC1_uid236_lnTables_lutmem.hex"
+   type="HEX" />
+ <file
+   path="log_inst_sim/log_inst_memoryC2_uid239_lnTables_lutmem.hex"
+   type="HEX" />
+ <file path="log_inst_sim/log_inst.vo" type="VERILOG" />
+ <topLevel name="log_inst" />
+ <deviceFamily name="max10" />
+</simPackage>

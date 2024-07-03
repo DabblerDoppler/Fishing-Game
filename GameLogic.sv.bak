@@ -1,0 +1,11 @@
+module GameLogic (
+	input logic clk,
+	input logic key,
+	input logic [9:0] accel_data,
+	//rodPosition is left when 0 or right when 1
+	output logic rodPosition,
+	//Start, Play, Win, Lose
+	output logic [1:0] GameState
+
+);
+

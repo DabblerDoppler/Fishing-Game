@@ -1,0 +1,45 @@
+module game_logic (
+	input logic clk,
+	input logic key,
+	//data from the Gsensor to show how the player is tilting the controller.
+	input logic [9:0] accelData,
+	//rodPosition is left when 0 or right when 1
+	//the VGA display uses this to signal to the player how they need to hold the controller.
+	output logic rodPosition,
+	//Start, Play, Win, Lose
+	//Logic is used here rather than an enum so it can be passed to other modules (like the VGA display).
+	output logic [1:0] gameState
+);
+	logic [4:0] fishSize;
+	logic [27:0] counter;
+	logic [4:0] presses;
+	logic [4:0] random;
+	
+	logic keyDebounced;
+	
+	logic tiltPos;
+	
+	debouncer db(.clk, .key,  .KEY_DEBOUNCED);
+	
+	pseudo_rng rng(.clk, .out(random));
+	
+	assign tiltPos = accelData[5] | accelData[6] | acceldata[7] |accelData[8] | acceldata[9];
+	
+	always @(posedge clk) begin
+	
+		case gameState
+	
+	
+		counter <= counter + 1;
+			//we start with 1 action per second, getting more difficult using a natural log scale with fishsize.
+			if (counter == (50000000 / $ln(fishSize + 2)) begin
+				//check if we're oriented the same way the rod is supposed to be, if it's not, change gamestate to lose.
+				if (tiltPos != rodPosiiton) gameState <= 2'b11;
+				//if we've pressed enough to catch the fish, change gamestate to win.
+				if (presses >= fishSize)    gameState <= 2'b10;
+				rodPosition <= random[0];
+				counter <= 1;
+			end
+			if(KEY_DEBOUNCED[0] & (presses != 31)) presses <= presses + 1;
+	end
+endmodule

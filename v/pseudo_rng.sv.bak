@@ -1,0 +1,21 @@
+module pseudo_rng (
+	input logic clk,
+	output logic out
+);
+
+	logic [4:0] register;
+	
+	initial begin
+		register <= 8'b11101001;
+		out <= 0;
+	end
+
+	always @(posedge clk) begin
+		register <= register >> 1;
+		register[1] <= register[2] ^ register[0];
+		register[4] <= register[3] ^ register[0];
+	
+		out <= register[0];
+	
+	end
+endmodule 
